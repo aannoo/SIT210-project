@@ -53,7 +53,7 @@ void loop() {
 
 
 void checkForLight() {
-	if (averageAnalogValue > 16) {
+	if (averageAnalogValue > 6) {
         // light is on, sound the alarm and send a notification!
         analogWrite(BUZZER_PIN, 100);
         Particle.publish("light_value", String("1"), PUBLIC);
